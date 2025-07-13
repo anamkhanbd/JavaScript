@@ -26,3 +26,27 @@ do {
     i++;
 } while (i < person.length);
 */
+
+
+
+/**
+ * JavaScript Array Methods
+ * 
+ * Basic Array Methods
+Array length    Array toString()    Array at()
+Array join()    Array pop()         Array push()
+Array shift()   Array unshift()     Array delete()
+Array concat()  Array copyWithin()  Array flat()
+Array slice()   Array splice()      Array toSpliced()
+*
+*
+ */
+
+// Array length
+console.log(person.length); // prints the length of the array
+// Array toString()
+console.log(person.toString()); // prints the array as a string
+
+//array delete
+delete person[4]; // deletes the element at index 1
+console.log(person); // prints the array after deletion
