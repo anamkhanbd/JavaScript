@@ -50,3 +50,14 @@ console.log(person.toString()); // prints the array as a string
 //array delete
 delete person[4]; // deletes the element at index 1
 console.log(person); // prints the array after deletion
+
+//array add data 
+person.push('Malik Shekh'); // adds a new element to the end of the array
+console.log(person); // prints the array after adding a new element
+
+//pop
+person.pop(); // removes the last element from the array
+console.log(person); // prints the array after removing the last element
+
+person.push('Ali'); // adds a new element to the end of the array
+console.log(person); // prints the array after adding a new element
