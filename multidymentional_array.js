@@ -11,3 +11,5 @@ let Names = [
     ],
     ["Sarah", "Davis", 28]
 ]
+
+console.log(Names[3][1][1][1]);// Output: "Martinez"
