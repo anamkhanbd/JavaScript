@@ -35,3 +35,10 @@ if (age >= 18) {
 */
 
 
+let age = Number(prompt('Type Your Age :'));
+while (age < 18 ){
+    age = Number(prompt('Type Your Actual Age : '));
+}
+if (age >= 18) {
+    alert('You Are Aligble, Now You Can Vote.')
+}
