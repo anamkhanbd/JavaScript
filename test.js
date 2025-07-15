@@ -22,6 +22,7 @@
 //     }
 // }
 
+/*
 let age =Number(prompt("Enter your age: "));
 
 while (age < 18) {
@@ -31,3 +32,6 @@ while (age < 18) {
 if (age >= 18) {
     alert("You are eligible to vote.");
 }
+*/
+
+
