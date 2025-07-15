@@ -43,14 +43,14 @@
 /**
  * when user type exit close the loop
  */
-// let userInput =prompt('Type Anithing to test :').trim();
-while (userInput !== 'exit') {
-    // console.log('You typed: ' + userInput);
-    userInput = prompt('Type Anithing to test :');
-}if (userInput === 'exit') {
-    // console.log('Loop exited.');
-     alert('Loop exited. You typed exit. Thank you!');
-}
+// // let userInput =prompt('Type Anithing to test :').trim();
+// while (userInput !== 'exit') {
+//     // console.log('You typed: ' + userInput);
+//     userInput = prompt('Type Anithing to test :');
+// }if (userInput === 'exit') {
+//     // console.log('Loop exited.');
+//      alert('Loop exited. You typed exit. Thank you!');
+// }
 
 
 
