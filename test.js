@@ -25,7 +25,7 @@
 let age =Number(prompt("Enter your age: "));
 
 while (age < 18) {
-    console.log("You are not eligible to vote.");
+    // console.log("You are not eligible to vote.");
     age = Number(prompt("Enter your age: "));
 }
 if (age >= 18) {
