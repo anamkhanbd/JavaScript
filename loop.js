@@ -13,5 +13,13 @@ for (i = 1; i <= 10; i++) {
 
 let a = 'anam';
 for (let i = 1; i <= 10; i++) {
-    console.log(i + ' ' + a);
+    // console.log(i + ' ' + a);
+}
+
+/**
+ * make a loop to print numbers 10 to 1
+ */
+let m = 10;
+for (let i = m; i>=1; i--){
+    console.log(i);
 }
