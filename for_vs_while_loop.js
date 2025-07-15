@@ -10,7 +10,18 @@ for (let i = 1; i <= 10; i++) {
  */
 let a = 1;
 while (a <= 10) {
-     console.log(a);
+     if (a % 2 === 0) {
+     //     console.log(a);
+     }
      a++;
+}
+
+/**
+ * print 5 multiples of 10 times using a for loop
+ */
+let m = 5;
+for ( let i = 1; i <=10; i++){
+    let result = m * i;
+          console.log(m+'x'+i+'='+result);
 }
 
