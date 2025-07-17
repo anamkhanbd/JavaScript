@@ -18,7 +18,9 @@ let Persons = [
         name : 'Mithu Mia',
         age  : 26,
         interest : [
-            
+            'photography','videograpghy','content Creator'
         ]
     }
 ]
+
+console.log(Persons[2].interest[0]);
