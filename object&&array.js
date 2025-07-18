@@ -23,4 +23,7 @@ let Persons = [
     }
 ]
 
-console.log(Persons[2].interest[0]);
+for (let i = 0; i < Persons.length; i++){
+    console.log(Persons[i]);
+    
+}
