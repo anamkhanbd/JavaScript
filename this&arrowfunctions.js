@@ -3,6 +3,7 @@
 //     show : function(){
 //         console.log('Hello'+' '+this.name);
 //     },
+
 // }
 // Hello.show();
 
