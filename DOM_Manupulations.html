@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomManupulation</title>
+</head>
+<body>
+    <h1>Hello world </h1>
+    <h1 class="sologan">This is a Sologan </h1>
+    <p class="pera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, voluptatibus suscipit ut numquam corporis necessitatibus temporibus iure eius asperiores, dignissimos placeat pariatur similique. Numquam reprehenderit ipsam nesciunt ducimus repudiandae maxime.</p>
+
+    <script>
+        let head = document.querySelectorAll('h1');
+        head.forEach( function(h){
+            h.style.color = " red";
+        });
+
+        let sologan = document.querySelectorAll('.sologan');
+        sologan.forEach(el => {
+            el.style.fontSize = '11px';
+        });
+    </script>
+</body>
+</html>
