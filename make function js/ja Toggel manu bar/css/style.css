@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh ;
+    background-image: url(../img/MERN_Stack.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba( 0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li{
+    height: 50px;
+}
+nav ul li a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    /* background-color: #871313; */
+    transition: all 0.3s ;
+}
+nav ul li a:hover{
+    background-color: #f0f0f0;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+
+.sideBar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #ffffff5d;
+    box-shadow: -10px 0 10px rgba( 0, 0, 0, 0.1);
+    display: none;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sideBar li {
+    width: 100%;
+}
+.sideBar a{
+    width: 100%;
+}
+.sideBar li:first-child{
+    align-items: end;
+}
+
+.manu-btn{
+    display: none;
+}
+
+/* responsive code */
+@media (max-width: 800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .manu-btn{
+        display: block;
+    }
+}
+
+@media (max-width:400px){
+    .sideBar{
+        width: 100%;
+    }
+}
