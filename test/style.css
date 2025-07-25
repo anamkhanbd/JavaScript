@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body{
+    min-height: 100vh;
+    background: url(./cover-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ nav{
+    background: #fff;
+    box-shadow: 0 0 0 0.1;
+ }
