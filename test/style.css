@@ -12,5 +12,79 @@
  }
  nav{
     background: #fff;
-    box-shadow: 0 0 0 0.1;
+    box-shadow: 3px 3px 5px rgba(0 0 0 0.1, green, blue, alpha);
+ }
+ nav ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20%;
+ }
+ nav li{
+    height: 50px;
+ }
+ nav li a{
+    height: 100%;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    transition: all 0.3s;
+ }
+ nav li a:hover{
+    background-color: #f0f0f0;
+ }
+ nav li:first-child{
+    margin-right: auto;
+ }
+
+ /* toggle css */
+ .toggle{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #ffffff60;
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 3px 5px rgba(0 0 0 0.1);
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+ }
+ .toggle li {
+    width: 100%;
+ }
+ .toggle li a{
+    width: 100%;
+ }
+ .close{
+    display: block;
+    margin-left: auto;
+ }
+
+
+ /* media quary code */
+ @media (min-width:800px){
+    .lg-hide{
+        display: none;
+    }
+   
+   
+ }
+
+ @media (max-width:800px) {
+    .m-hide{
+        display: none;
+    }
+     .toggle{
+        width: 50%;
+    }
+     nav ul {
+        margin-right: 0;
+    }
  }

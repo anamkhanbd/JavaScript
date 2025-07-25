@@ -8,7 +8,9 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <!-- Toggle manu -->
+        <ul class="toggle">
+            <li onclick="hideToggle()"><a href="#"><img src="./close.png"  class="close" alt="close img for toggle manu"> </a></li>
             <li><a href="#">UTTER TECH </a></li>
             <li><a href="#">Home </a></li>
             <li><a href="#">Service</a></li>
@@ -16,11 +18,30 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Policy</a></li>
         </ul>
+
+        <!-- Main manu -->
+        <ul>
+            <li><a href="#">UTTER TECH </a></li>
+            <li class="m-hide"><a href="#">Home </a></li>
+            <li class="m-hide"><a href="#">Service</a></li>
+            <li class="m-hide"><a href="#">Products</a></li>
+            <li class="m-hide"><a href="#">About</a></li>
+            <li class="m-hide"><a href="#">Policy</a></li>
+            <li onclick="toggle()" class="lg-hide"><a href="#"><img src="./menu.png" alt="manu icon png"></a></li>
+        </ul>
     </nav>
 
     <!-- JS Code -->
     <script>
+        function toggle(){
+            const hamster = document.querySelector('.toggle');
+            hamster.style.display = 'block';
+        }
 
+        function hideToggle(){
+            const hamster = document.querySelector('.toggle');
+            hamster.style.display = 'none';
+        }
     </script>
 </body>
 </html>
