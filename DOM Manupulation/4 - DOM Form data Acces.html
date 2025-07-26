@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM  Form Data Acces </title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Name </label>
+        <input type="text" name="" id="name">
+
+        <label for="email ">Email </label>
+        <input type="email" name="" id="email">
+
+        <button type="submit">SUBMIT</button>
+    </form>
+    <h1></h1>
+    <h2></h2>
+
+    <script>
+        let input = document.querySelectorAll('input');
+        let btn = document.querySelector('button');
+        let name = document.querySelector('h1');
+        let email = document.querySelector('h2');
+
+        btn.addEventListener('click', function(e){
+            e.preventDefault();
+            name.innerHTML  = input[0].value;
+            email.innerHTML  = input[1].value;
+        })
+        
+    </script>
+</body>
+</html>
