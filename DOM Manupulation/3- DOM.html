@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+</head>
+<body>
+    <h1>Hello World ! </h1>
+    <button>Click Me</button>
+    
+    
+    <script>
+        let title = document.querySelector('h1');
+        let btn = document.querySelector('button');
+        let isRed = false ;
+        btn.addEventListener('click', function(){
+            if (!isRed) {
+                title.style.color = 'red';
+                isRed = true;
+            } else {
+                title.style.color = '#000';
+                isRed = false;
+            }
+        })
+    </script>
+</body>
+</html>

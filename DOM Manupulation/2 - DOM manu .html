@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        nav{
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba( 0, 0, 0, 0.1);
+    }
+
+    nav ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul li{
+        height: 50px;
+    }
+    nav ul li a{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+        /* background-color: #871313; */
+        transition: all 0.3s ;
+    }
+    nav ul li a:hover{
+        background-color: #f0f0f0;
+    }
+
+    nav li:first-child{
+        margin-right: auto;
+    }
+    </style>
+    <title>Nav Active !</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">UTTER TECH</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
