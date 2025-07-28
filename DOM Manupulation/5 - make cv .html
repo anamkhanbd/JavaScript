@@ -199,9 +199,10 @@
   <div class="container">
 
     <div class="sidebar">
-      <img src="https://avatars.githubusercontent.com/u/76263004?v=4" alt="Profile Photo">
+      <img id="profile" src="https://avatars.githubusercontent.com/u/76263004?v=4" alt="Profile Photo">
       <h2 class="authorName"></h2>
       <p class="authorTitle"></p>
+
     </div>
 
     <div class="main">
@@ -260,40 +261,46 @@
     <form id="cvInfo">
 
       <div class="row">
+
+        <div class="form-group">
+          <label for="authorIMG">Image URL</label>
+          <input type="imgURL" required id="authorName" placeholder="Enter your full name">
+        </div>
+
         <div class="form-group">
           <label for="authorName">Your Name</label>
-          <input type="text" id="authorName" placeholder="Enter your full name">
+          <input type="text" required id="authorName" placeholder="Enter your full name">
         </div>
         <div class="form-group">
           <label for="authorTitle">Job Title</label>
-          <input type="text" id="authorTitle" placeholder="Ex: MERN & Laravel Developer">
+          <input type="text" required id="authorTitle" placeholder="Ex: MERN & Laravel Developer">
         </div>
       </div>
 
       <div class="form-group">
         <label for="authorDescription">About You</label>
-        <textarea id="authorDescription" placeholder="Write a short bio about you..."></textarea>
+        <textarea id="authorDescription" required placeholder="Write a short bio about you..."></textarea>
       </div>
 
       <div class="row">
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="your@example.com">
+          <input type="email" required id="email" placeholder="your@example.com">
         </div>
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input type="text" id="phone" placeholder="+8801XXXXXXX">
+          <input type="text" required id="phone" placeholder="+8801XXXXXXX">
         </div>
       </div>
 
       <div class="row">
         <div class="form-group">
           <label for="linkedin">LinkedIn</label>
-          <input type="text" id="linkedin" placeholder="linkedin.com/in/username">
+          <input type="text" required id="linkedin" placeholder="linkedin.com/in/username">
         </div>
         <div class="form-group">
           <label for="github">GitHub</label>
-          <input type="text" id="github" placeholder="github.com/username">
+          <input type="text" required id="github" placeholder="github.com/username">
         </div>
       </div>
 
@@ -303,40 +310,40 @@
             <div class="row">
             <div class="form-group">
             <label for="skill-1">Skill -1</label>
-            <input type="text" id="skill-1" placeholder="JavaScript">
+            <input type="text" required id="skill-1" placeholder="JavaScript">
             </div>
             <div class="form-group">
             <label for="skill-2">skill-2</label>
-            <input type="text" id="skill-2" placeholder="Node.js">
+            <input type="text" required id="skill-2" placeholder="Node.js">
             </div>
 
             <div class="form-group">
             <label for="skill-3">Skill -3</label>
-            <input type="text" id="skill-3" placeholder="Laravel">
+            <input type="text" required id="skill-3" placeholder="Laravel">
             </div>
             <div class="form-group">
             <label for="skill-4">skill-4</label>
-            <input type="text" id="skill-4" placeholder="MERN">
+            <input type="text" required id="skill-4" placeholder="MERN">
             </div>
         </div>
 
         <div class="row">
             <div class="form-group">
             <label for="skill-5">Skill -5</label>
-            <input type="text" id="skill-5" placeholder="PHP">
+            <input type="text" required id="skill-5" placeholder="PHP">
             </div>
             <div class="form-group">
             <label for="skill-6">skill-6</label>
-            <input type="text" id="skill-6" placeholder="SQL">
+            <input type="text" required id="skill-6" placeholder="SQL">
             </div>
 
             <div class="form-group">
             <label for="skill-7">Skill -7</label>
-            <input type="text" id="skill-7" placeholder="HTML">
+            <input type="text" required id="skill-7" placeholder="HTML">
             </div>
             <div class="form-group">
             <label for="skill-8">skill-8</label>
-            <input type="text" id="skill-8" placeholder="CSS">
+            <input type="text" required id="skill-8" placeholder="CSS">
             </div>
         </div>
       </div>
@@ -347,12 +354,12 @@
       <div class="form-group">
         <label for="jobTitle1">Job Title
         </label>
-        <input type="text" id="jobTitle1" placeholder="Full Stack Developer">
+        <input type="text"  id="jobTitle1" placeholder="Full Stack Developer">
       </div>
 
       <div class="form-group">
         <label for="company1">Company Name</label>
-        <input type="text" id="company1" placeholder="Company name...">
+        <input type="text"  id="company1" placeholder="Company name...">
       </div>
 
       <div class="form-group">
@@ -362,12 +369,12 @@
 
       <div class="form-group">
         <label for="educationTitle">Education Title</label>
-        <input type="text" id="educationTitle" placeholder="BSc in Computer Science">
+        <input type="text" required id="educationTitle" placeholder="BSc in Computer Science">
       </div>
 
       <div class="form-group">
         <label for="collegeName">College/University Name</label>
-        <input type="text" id="collegeName" placeholder="Rangpur University">
+        <input type="text" required id="collegeName" placeholder="Rangpur University">
       </div>
 
       <button type="submit">Submit & Generate Resume</button>
@@ -421,10 +428,17 @@
         let input = document.querySelector('#cvInfo');
         let submit = document.querySelector('button');
 
+        //image url
+        // let imgURL = document.querySelector('.imgURL');
+        // let imgProfile = document.querySelector('.profile');
+
         // outputs
         // console.log(input);
         submit.addEventListener('click', function(e){
             e.preventDefault();
+            //images
+            // imgURL.innerHTML = imgProfile.src;
+
             authorName.innerHTML = input[0].value;
             authorTitle.innerHTML = input[1].value;
             authorDescription.innerHTML = input[2].value;
@@ -452,6 +466,7 @@
             
             form.style.display = 'none';
             container.style.display = 'grid'
+
 
         });
         
