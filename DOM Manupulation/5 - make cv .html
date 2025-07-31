@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern CV - A H ANAM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      display: none;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    .sidebar {
+      background: #2c3e50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .sidebar h2 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .sidebar p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .main {
+      padding: 30px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h3 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 5px;
+    }
+
+    .section ul {
+      list-style: none;
+    }
+
+    .section ul li {
+      margin-bottom: 10px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #2c3e50;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin: 5px 5px 0 0;
+      font-size: 14px;
+    }
+
+
+/* form css */
+    body {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px;
+      color: #333;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #0072ff;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #0072ff;
+      outline: none;
+    }
+
+    button {
+      background-color: #0072ff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #005ecb;
+    }
+
+    .row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .row .form-group {
+      flex: 1;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* print button */
+    .print-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+@media print {
+  .print-btn {
+    display: none; /* Hide button when printing */
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Print BTN -->
+     <!-- Add this inside .container div, preferably at the end -->
+    <!-- <button class="print-btn" onclick="printResume()">Print Resume</button> -->
+
+
+    <div class="sidebar">
+      <img id="profile" src="https://avatars.githubusercontent.com/u/76263004?v=4" alt="Profile Photo">
+      <h2 class="authorName"></h2>
+      <p class="authorTitle"></p>
+
+    </div>
+
+    <div class="main">
+      <div class="section">
+        <h3>About Me</h3>
+        <p class="authorDescription"></p>
+      </div>
+
+      <div class="section">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: <span class="email"></span></li>
+          <li>Phone: <span class="phoneNumber"></span></li>
+          <li>LinkedIn: <span class="linkDin"></span></li>
+          <li>GitHub: <span class="gitHub"></span></li>
+        </ul>
+      </div>
+
+      <div class="section skills">
+        <h3>Skills</h3>
+        <span class="skill-1"></span>
+        <span class="skill-2"></span>
+        <span class="skill-3"></span>
+        <span class="skill-4"></span>
+        <span class="skill-5"></span>
+        <span class="skill-6"></span>
+        <span class="skill-7"></span>
+        <span class="skill-8"></span>
+      </div>
+
+      <div class="section">
+        <h3>Experience</h3>
+        <ul>
+          <li>
+            <strong class="jobTitle"></strong> - <span class="comapny-1">    
+            </span><br/>
+            <p class="jobDescription"> </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Education</h3>
+        <ul>
+          <li>
+          <strong class="education"></strong> - <span class="collageName"> </span>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- make Form here  -->
+   <div class="form-container">
+    <h2>Resume Info Input Form</h2>
+    <form id="cvInfo">
+
+      <div class="row">
+
+        <div class="form-group">
+          <label for="authorIMG">Image URL</label>
+          <input type="imgURL" required id="authorIMG" placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="authorName">Your Name</label>
+          <input type="text" required id="authorName" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+          <label for="authorTitle">Job Title</label>
+          <input type="text" required id="authorTitle" placeholder="Ex: MERN & Laravel Developer">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="authorDescription">About You</label>
+        <textarea id="authorDescription" required placeholder="Write a short bio about you..."></textarea>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" required id="email" placeholder="your@example.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" required id="phone" placeholder="+8801XXXXXXX">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="linkedin">LinkedIn</label>
+          <input type="text" required id="linkedin" placeholder="linkedin.com/in/username">
+        </div>
+        <div class="form-group">
+          <label for="github">GitHub</label>
+          <input type="text" required id="github" placeholder="github.com/username">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <br>
+        <label for="skills">Skills </label><hr>
+            <div class="row">
+            <div class="form-group">
+            <label for="skill-1">Skill -1</label>
+            <input type="text" required id="skill-1" placeholder="JavaScript">
+            </div>
+            <div class="form-group">
+            <label for="skill-2">skill-2</label>
+            <input type="text" required id="skill-2" placeholder="Node.js">
+            </div>
+
+            <div class="form-group">
+            <label for="skill-3">Skill -3</label>
+            <input type="text" required id="skill-3" placeholder="Laravel">
+            </div>
+            <div class="form-group">
+            <label for="skill-4">skill-4</label>
+            <input type="text" required id="skill-4" placeholder="MERN">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+            <label for="skill-5">Skill -5</label>
+            <input type="text" required id="skill-5" placeholder="PHP">
+            </div>
+            <div class="form-group">
+            <label for="skill-6">skill-6</label>
+            <input type="text" required id="skill-6" placeholder="SQL">
+            </div>
+
+            <div class="form-group">
+            <label for="skill-7">Skill -7</label>
+            <input type="text" required id="skill-7" placeholder="HTML">
+            </div>
+            <div class="form-group">
+            <label for="skill-8">skill-8</label>
+            <input type="text" required id="skill-8" placeholder="CSS">
+            </div>
+        </div>
+      </div>
+    
+
+      
+
+      <div class="form-group">
+        <label for="jobTitle1">Job Title
+        </label>
+        <input type="text"  id="jobTitle1" placeholder="Full Stack Developer">
+      </div>
+
+      <div class="form-group">
+        <label for="company1">Company Name</label>
+        <input type="text"  id="company1" placeholder="Company name...">
+      </div>
+
+      <div class="form-group">
+        <label for="jobDescription1">Job Description</label>
+        <textarea id="jobDescription1" placeholder="Describe what you did..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="educationTitle">Education Title</label>
+        <input type="text" required id="educationTitle" placeholder="BSc in Computer Science">
+      </div>
+
+      <div class="form-group">
+        <label for="collegeName">College/University Name</label>
+        <input type="text" required id="collegeName" placeholder="Rangpur University">
+      </div>
+
+      <button type="submit">Submit & Generate Resume</button>
+
+    </form>
+  </div>
+
+</body>
+
+<script>
+    let container = document.querySelector('.container')
+    // Sidebar info
+        let authorName = document.querySelector('.authorName');
+        let authorTitle = document.querySelector('.authorTitle');
+        let authorDescription = document.querySelector('.authorDescription');
+
+        // Contact Info
+        let email = document.querySelector('.email');
+        let phoneNumber = document.querySelector('.phoneNumber');
+        let linkedIn = document.querySelector('.linkDin');
+        let github = document.querySelector('.gitHub');
+
+        // Skills
+        let skill1 = document.querySelector('.skill-1');
+        let skill2 = document.querySelector('.skill-2');
+        let skill3 = document.querySelector('.skill-3');
+        let skill4 = document.querySelector('.skill-4');
+        let skill5 = document.querySelector('.skill-5');
+        let skill6 = document.querySelector('.skill-6');
+        let skill7 = document.querySelector('.skill-7');
+        let skill8 = document.querySelector('.skill-8');
+        let skill9 = document.querySelector('.skill-9');
+        let skill10 = document.querySelector('.skill-10');
+
+        // Experience - Job 1
+        let jobTitle1 = document.querySelector('.jobTitle');
+        let company1 = document.querySelector('.comapny-1');
+        let jobDescription1 = document.querySelector('.jobDescription');
+
+        // Experience - Job 2
+        let jobTitle2 = document.querySelector('.jobTitle-2');
+        let company2 = document.querySelector('.company-2');
+        let jobDescription2 = document.querySelector('.jobDescription-2');
+
+        // Education
+        let educationTitle = document.querySelector('.education');
+        let collageName = document.querySelector('.collageName');
+
+        // form data 
+        let form = document.querySelector('.form-container');
+        let input = document.querySelector('#cvInfo');
+        let submit = document.querySelector('button');
+
+        //image url
+        // let imgURL = document.querySelector('.imgURL');
+        // let imgProfile = document.querySelector('.profile');
+
+        // outputs
+        // console.log(input);
+        submit.addEventListener('click', function(e){
+            e.preventDefault();
+            //images
+            // imgURL.innerHTML = imgProfile.src;
+
+            authorName.innerHTML = input[0].value;
+            authorTitle.innerHTML = input[1].value;
+            authorDescription.innerHTML = input[2].value;
+
+            email.innerHTML = input[3].value;
+            phoneNumber.innerHTML = input[4].value;
+            linkedIn.innerHTML = input[5].value;
+            github.innerHTML = input[6].value;
+
+            skill1.innerHTML = input[7].value;
+            skill2.innerHTML = input[8].value;
+            skill3.innerHTML = input[9].value;
+            skill4.innerHTML = input[10].value;
+            skill5.innerHTML = input[11].value;
+            skill6.innerHTML = input[12].value;
+            skill7.innerHTML = input[13].value;
+            skill8.innerHTML = input[14].value;
+
+            jobTitle1.innerHTML = input[15].value;
+            company1.innerHTML = input[16].value;
+            jobDescription1.innerHTML = input[17].value;
+
+            educationTitle.innerHTML = input[18].value;
+            collageName.innerHTML = input[19].value;
+            
+            form.style.display = 'none';
+            container.style.display = 'grid'
+
+
+        });
+
+        //print function section
+  //       form.style.display = 'block';  
+  //        function printResume() {
+  //   window.print();
+  // }
+
+</script>
+</html>
